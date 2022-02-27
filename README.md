@@ -3,6 +3,7 @@
 # Employee Management System
 
 ## Description
+Link to recording of the application in action: https://drive.google.com/file/d/1M_eacyKPYo3pFVnR2QxZRGR_H-92g1EP/view
 This application uses a terminal interface and MySQL to demonstrate activities common to HR, such as viewing and adding departments, roles and employees.
 
 ## Table of Contents
