@@ -3,6 +3,7 @@ const { viewAllRoles, addRole } = require('./lib/roles')
 const { viewAllDepartments, addDepartment } = require('./lib/departments')
 const { viewAllEmployees, addEmployee, updateEmployee } = require('./lib/employees');
 
+//Main menu selection - each will go to a separate function.
   const selectAction = async () => {
     console.log(`
     ==========================

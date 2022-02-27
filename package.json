@@ -27,6 +27,5 @@
   "homepage": "https://github.com/8bitgaming/10-Employee-Mgmt-System#readme",
   "description": "",
   "devDependencies": {
-    "eslint": "^8.9.0"
   }
 }
