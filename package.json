@@ -4,5 +4,29 @@
     "express": "^4.17.3",
     "inquirer": "^8.2.0",
     "mysql2": "^2.3.3"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "10-employee-mgmt-system",
+  "version": "1.0.0",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8bitgaming/10-Employee-Mgmt-System.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/8bitgaming/10-Employee-Mgmt-System/issues"
+  },
+  "homepage": "https://github.com/8bitgaming/10-Employee-Mgmt-System#readme",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.9.0"
   }
 }

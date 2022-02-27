@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS cms;
-CREATE DATABASE cms;
-USE cms;
+DROP DATABASE IF EXISTS employee_management_system;
+CREATE DATABASE employee_management_system;
+USE employee_management_system;

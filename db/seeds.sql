@@ -1,4 +1,4 @@
-INSERT INTO department
+ INSERT INTO department
   (name)
 VALUES
   ('Information Technology'),
