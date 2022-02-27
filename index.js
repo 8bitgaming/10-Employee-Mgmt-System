@@ -1,8 +1,7 @@
 const inquirer = require('inquirer');
-const {viewAllRoles, addRole} = require('./lib/roles')
+const { viewAllRoles, addRole } = require('./lib/roles')
 const { viewAllDepartments, addDepartment } = require('./lib/departments')
-const { viewAllEmployees } = require('./lib/employees');
-const { response } = require('express');
+const { viewAllEmployees, addEmployee, updateEmployee } = require('./lib/employees');
 
   const selectAction = async () => {
     console.log(`
@@ -20,40 +19,49 @@ const { response } = require('express');
     },
   ]) .then (({type}) => {
       switch (type) {
-        case 'View All Departments': viewAllDepartments().then( response => {
+        case 'View All Departments': viewAllDepartments().then(response => {
           console.table(response)
           selectAction()
         })
         break;
-        case 'View all Roles': viewAllRoles().then( response => {
+        case 'View all Roles': viewAllRoles().then(response => {
           console.table(response)
           selectAction()
         })
         break;
-        case 'View All Employees': viewAllEmployees()
-        break;
-        case 'Add a Department': addDepartment()
-        break;
-        case 'Add a Role': addRole().then( response => {
-          console.log(`Success!`)
+        case 'View All Employees': viewAllEmployees().then(response => {
+          console.table(response)
           selectAction()
         })
         break;
-        case 'Add an Employee': addEmployee()
+        case 'Add a Department': addDepartment().then(response => {
+          console.log(`Success - New department added!`)
+          selectAction()
+        })
         break;
-        case 'Update an Employee': updateEmployee()
+        case 'Add a Role': addRole().then(response => {
+          console.log(`Success - New role added!`)
+          selectAction()
+        })
         break;
-        case 'Quit': quitCheck()
+        case 'Add an Employee': addEmployee().then(response => {
+          selectAction()
+        })
+        break;
+        case 'Update an Employee': updateEmployee().then(response => {
+          selectAction()
+        })
+        break;
+        case 'Quit': quit()
         break;
         default: console.log('Select a Valid Option.')
       }
     })
   }
 
-  const quitCheck = () => {
+  const quit = () => {
+  console.log('Goodbye!') 
   process.exit()
-  console.log('Goodbye') 
   }
 
 selectAction()
-// .then (quitCheck())

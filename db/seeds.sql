@@ -12,7 +12,10 @@ VALUES
   ('CEO', 255000, 1),
   ('Manager', 160000, 1),
   ('Senior Engineer', 140000, 1),
-  ('Engineer', 120000, 1);
+  ('Engineer', 120000, 1),
+  ('Recruiter', 65000, 2),
+  ('Accountant', 60000, 3),
+  ('Product Owner', 120000, 4);
 
   INSERT INTO employee
   (first_name, last_name, role_id, manager_id)
